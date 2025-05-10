@@ -1,7 +1,7 @@
 
 # Optimizing BERT-base for Efficient News Classification
 
-This project aims to optimize the **BERT-base** model for **efficient news topic classification**, incorporating techniques such as **LoRA** (Low-Rank Adaptation) and **mixed precision** to enhance classification accuracy and reduce computational overhead.
+This project aims to optimize the **BERT-base** model for **efficient news topic classification**, incorporating techniques such as **LoRA** (Low-Rank Adaptation) and **mixed precision** to enhance classification accuracy and reduce computational overhead. We run the code through Colab A100 node.
 
 ## Dataset
 
