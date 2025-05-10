@@ -49,7 +49,9 @@ This approach is used to speed up the training process while maintaining the acc
 
 ## Observation
 **Latency**: LoRA + AMP reduced inference time from 21.44 ms → 14.64 ms, showing faster forward efficiency.
+
 **Memory**: Memory usage in key ops (e.g., addmm, gelu) dropped by ~50%, indicating better GPU memory utilization.
+
 **Training Efficiency**: Although validation accuracy dropped (↓ ~10%) due to fewer trainable parameters and FP16 precision, training time per epoch improved dramatically from 1600s to 430s.
 
 
