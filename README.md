@@ -5,7 +5,7 @@ This project aims to optimize the **BERT-base** model for **efficient news topic
 
 ## Dataset
 
-The dataset consists of **200,000+ news headlines** from the **HuffPost** spanning the years **2012-2018**. Each headline is associated with a corresponding **short description** and a category. The task is to predict the category of news articles based on their headlines and descriptions. This model can be used to identify the category tags for untracked news articles and understand the type of language used across different news categories.
+The dataset consists of **200,000+ news headlines** from the **HuffPost** spanning the years **2012-2018**. Each headline is associated with a corresponding **short description** and a **category**. The task is to predict the category of news articles based on their headlines and descriptions. This model can be used to identify the category tags for untracked news articles and understand the type of language used across different news categories.
 
 You can access the dataset from [Kaggle](https://www.kaggle.com/datasets/rmisra/news-category-dataset).
 
