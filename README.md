@@ -9,7 +9,7 @@ The dataset consists of **200,000+ news headlines** from the **HuffPost** spanni
 
 You can access the dataset from [Kaggle](https://www.kaggle.com/datasets/rmisra/news-category-dataset).
 
-### Dataset Categories:
+### Example Dataset Categories:
 
 * Politics
 * Business
@@ -34,10 +34,24 @@ The **BERT-base** model was fine-tuned on the dataset for news topic classificat
 This approach is used to speed up the training process while maintaining the accuracy of the model. It reduces memory usage and speeds up the model's training without sacrificing model performance.
 
 ## Results
+
+### Model Performance 
 | Model                    | Test Accuracy | Test Loss   | Training Time (1 Epoch) |
 |--------------------------|---------------|-------------|-------------------------|
 | **BERT-base (Fine-Tuned)**| 71.25%        | 0.1288      | ~1600s                  |
 | **BERT + LoRA + AMP**     | 61.78%        | 1.4186      | ~430s                   |
+
+### Model Size
+| Model                    | Trainable Parameters(K) | Model Size(MB)   | 
+|--------------------------|---------------|-------------|
+| **BERT-base (Fine-Tuned)**| 1110,000       | 419.03      | 
+| **BERT + LoRA + AMP (Adapter Only)**     | 344.1       | 1.25      |
+
+## Observation
+**Latency**: LoRA + AMP reduced inference time from 21.44 ms → 14.64 ms, showing faster forward efficiency.
+**Memory**: Memory usage in key ops (e.g., addmm, gelu) dropped by ~50%, indicating better GPU memory utilization.
+**Training Efficiency**: Although validation accuracy dropped (↓ ~10%) due to fewer trainable parameters and FP16 precision, training time per epoch improved dramatically from 1600s to 430s.
+
 
 ## Requirements
 
